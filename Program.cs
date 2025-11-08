@@ -17,3 +17,15 @@ Console.WriteLine($"Середнє арифметичне: {arr.Avg():F2}");
 Console.WriteLine($"Пошук числа 9: {arr.Search(9)}");
 Console.WriteLine($"Пошук числа 100: {arr.Search(100)}");
 
+arr.SortAsc();
+arr.Show("Після сортування за зростанням:");
+
+arr.SortDesc();
+arr.Show("Після сортування за спаданням:");
+
+arr.SortByParam(true);
+arr.Show("SortByParam(true):");
+
+arr.SortByParam(false);
+arr.Show("SortByParam(false):");
+

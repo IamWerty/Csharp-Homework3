@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Csharp_Homework3_1
 {
-    public class MyArray : IOutput, IMath
+    public class MyArray : IOutput, IMath, ISort
     {
         private int[] array;
 
@@ -38,5 +38,23 @@ namespace Csharp_Homework3_1
         public float Avg() => (float)array.Average();
 
         public bool Search(int value) => array.Contains(value);
+
+        // Методи ISort
+        public void SortAsc()
+        {
+            Array.Sort(array);
+        }
+
+        public void SortDesc()
+        {
+            Array.Sort(array);
+            Array.Reverse(array);
+        }
+
+        public void SortByParam(bool isAsc)
+        {
+            if (isAsc) SortAsc();
+            else SortDesc();
+        }
     }
 }
