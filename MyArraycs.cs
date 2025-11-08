@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Csharp_Homework3_1
 {
-    public class MyArray : IOutput
+    public class MyArray : IOutput, IMath
     {
         private int[] array;
 
@@ -15,6 +15,7 @@ namespace Csharp_Homework3_1
             array = numbers;
         }
 
+        // Методи IOutput
         public void Show()
         {
             Console.WriteLine("Елементи масиву:");
@@ -28,5 +29,14 @@ namespace Csharp_Homework3_1
             Console.WriteLine(info);
             Show();
         }
+
+        // Методи IMath
+        public int Max() => array.Max();
+
+        public int Min() => array.Min();
+
+        public float Avg() => (float)array.Average();
+
+        public bool Search(int value) => array.Contains(value);
     }
 }

@@ -4,8 +4,16 @@ using System.Text;
 
 Console.OutputEncoding = System.Text.Encoding.UTF8;
 
+
 int[] numbers = { 5, 2, 9, 1, 3 };
 MyArray arr = new MyArray(numbers);
 
-arr.Show();
-arr.Show("Масив створено успішно");
+arr.Show("Поточний масив:");
+
+Console.WriteLine($"Максимум: {arr.Max()}");
+Console.WriteLine($"Мінімум: {arr.Min()}");
+Console.WriteLine($"Середнє арифметичне: {arr.Avg():F2}");
+
+Console.WriteLine($"Пошук числа 9: {arr.Search(9)}");
+Console.WriteLine($"Пошук числа 100: {arr.Search(100)}");
+
